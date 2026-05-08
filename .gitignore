@@ -1,3 +1,43 @@
 # Godot 4+ specific ignores
-.godot/
-/android/
+# Mono / C# related
+.mono/
+mono_crash.*.json
+data_*/  # Mono data directories
+*.pidb
+*.userprefs
+
+# Export / build output
+export/
+exports/
+build/
+gradle/  # Android build output
+
+# Editor specific
+*~
+*.swp
+*.tmp
+*.temp
+*.save
+*.orig
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Godot-specific user settings
+editor_settings-*.cfg
+script_templates-*.cfg
+
+# Logs
+logs/
+*.log
+
+# Godot 3.x legacy (optional)
+# .mono/ is already above, but also ignore these if present
+*.cs.meta

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://gpi0yfxjh3t3"]
+
+[ext_resource type="Script" uid="uid://gt3wr8rb44d" path="res://Scenes/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://q0cghfj8gn7n" path="res://Assets/Sprites/Planes/planeRed1.png" id="1_v0iea"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
+radius = 40.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1537498584]
+script = ExtResource("1_cvnsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1885661856]
+texture = ExtResource("1_v0iea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1476735961]
+shape = SubResource("CircleShape2D_cvnsp")

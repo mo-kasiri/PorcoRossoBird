@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dfx62yyn4tv4"]
+
+[ext_resource type="PackedScene" uid="uid://gpi0yfxjh3t3" path="res://Scenes/player.tscn" id="1_jjgbg"]
+
+[node name="Node2D" type="Node2D" unique_id=1463615460]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="." unique_id=1613923739]
+action = "jump"
+
+[node name="Player" parent="." unique_id=1537498584 instance=ExtResource("1_jjgbg")]
+position = Vector2(243, 436)
