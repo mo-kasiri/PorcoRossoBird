@@ -4,6 +4,9 @@
 [ext_resource type="Script" uid="uid://d3e7grl8cmqpv" path="res://Scripts/obstacle.gd" id="1_rvx1i"]
 [ext_resource type="Texture2D" uid="uid://dtfi2ha7ihubr" path="res://Assets/Sprites/rockSnow.png" id="2_rvx1i"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvx1i"]
+size = Vector2(20, 91.5)
+
 [node name="Obstacle" type="Node2D" unique_id=2077279263]
 scale = Vector2(2, 2)
 script = ExtResource("1_rvx1i")
@@ -26,5 +29,18 @@ texture = ExtResource("2_rvx1i")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bottom" unique_id=2081322488]
 polygon = PackedVector2Array(-55, 116, 55, 117, 16, -118, 8, -118)
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=416991868]
+position = Vector2(61, -100)
+rect = Rect2(-10, -40, 20, 80)
+
+[node name="ExitArea" type="Area2D" parent="." unique_id=1417970852]
+position = Vector2(61, -100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea" unique_id=1224657399]
+position = Vector2(-27, 0.5)
+shape = SubResource("RectangleShape2D_rvx1i")
+
 [connection signal="body_entered" from="Top" to="." method="_on_top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_bottom_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="body_exited" from="ExitArea" to="." method="_on_exit_area_body_exited"]

@@ -31,7 +31,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
-radius = 40.0
+radius = 35.014282
 
 [node name="Player" type="CharacterBody2D" unique_id=1537498584]
 script = ExtResource("1_cvnsp")
@@ -42,4 +42,5 @@ animation = &"move"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1476735961]
+position = Vector2(5, 2)
 shape = SubResource("CircleShape2D_cvnsp")

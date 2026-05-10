@@ -3,7 +3,6 @@ class_name Player
 
 const PI: float = 3.141592653589793;
 
-
 signal on_game_started;
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -12,9 +11,10 @@ signal on_game_started;
 @export var jump_force: float = -400
 @export var max_speed: float = 600
 @export var rotation_speed: float = 6
+static  var player_point: int = 0;
 
-var is_started: bool = false;
-var should_process_input: bool = true;
+@export var is_started: bool = false;
+@export var should_process_input: bool = true;
 
 #region private_methods
 func _rotate_player(deg: float, delta: float) -> float:
@@ -47,11 +47,18 @@ func _physics_process(delta: float) -> void:
 	
 	# Apply rotation
 	rotation = _rotate_player(sign(velocity.y) * PI/6, delta)
-	
-func _process(delta: float) -> void:
-	pass
-	
 
 
-func _on_obstacle_on_plane_crash() -> void:
-	is_started = false;
+func _add_pint():
+	player_point += 1;
+	
+func _stop_movement() ->void:
+	should_process_input = false;
+	
+func _stop_gravity() -> void:
+	gravity = 0
+	velocity = Vector2.ZERO
+
+func stop_movement() -> void:
+	#_stop_gravity();
+	_stop_movement();

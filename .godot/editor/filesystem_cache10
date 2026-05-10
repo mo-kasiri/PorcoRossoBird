@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778358612
+::res://::1778437227
 icon.svg::CompressedTexture2D::2250622736584916852::1778253681::1778253692::1::::<><><>0<>0<>3aadbdcd0de189b75ab39d5c3eec4eec<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 KaramaLogo.svg::CompressedTexture2D::4185736384773443717::1778271032::1778271076::1::::<><><>0<>0<>277cf005dc6496589f30c9cd91abd322<>res://.godot/imported/KaramaLogo.svg-a069b6eaf87307ef19dfe9289804dd5e.ctex::
 README.md::TextFile::-1::1778253902::0::1::::<><><>0<>0<><>::
@@ -42,8 +42,14 @@ tapTick.png::CompressedTexture2D::6864859009277166699::1778271952::1778271953::1
 textGameOver.png::CompressedTexture2D::618944589921854803::1778271952::1778271953::1::::<><><>0<>0<>0459cee8349825878a05f2c7550da031<>res://.godot/imported/textGameOver.png-58f2ed92f164c03dcace6d77a2a78bd5.ctex::
 textGetReady.png::CompressedTexture2D::7655046250166005230::1778271952::1778271953::1::::<><><>0<>0<>2b6f9296f7156adfe6863c86df0ae0c7<>res://.godot/imported/textGetReady.png-90584a47d971e490ee235a7b6a4ebe05.ctex::
 UIbg.png::CompressedTexture2D::3702752671040061402::1778271952::1778271953::1::::<><><>0<>0<>17a234751b1a4368552ab482bd14589e<>res://.godot/imported/UIbg.png-4a7fc342e36d286bde601d11aa3cd82c.ctex::
-::res://Scenes/::1778358612
-main.tscn::PackedScene::222341726443821419::1778358612::0::1::::<><><>0<>0<><>::uid://duiy5x8u0hr7r::::res://Assets/Sprites/background.png<>uid://gpi0yfxjh3t3::::res://Scenes/player.tscn
-player.tscn::PackedScene::452630378270620538::1778358617::0::1::::<><><>0<>0<><>::uid://gt3wr8rb44d::::res://Scenes/player.gd<>uid://q0cghfj8gn7n::::res://Assets/Sprites/Planes/planeRed1.png<>uid://wcfvmyu4tg8j::::res://Assets/Sprites/Planes/planeRed2.png<>uid://l1m1yptx56t::::res://Assets/Sprites/Planes/planeRed3.png
-::res://Scripts/::1778358612
-player.gd::GDScript::13591074913797321::1778358445::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Scenes/::1778437211
+main.tscn::PackedScene::222341726443821419::1778436632::0::1::::<><><>0<>0<><>::uid://rp4nmq6fp3m2::::res://Scripts/main.gd<>uid://duiy5x8u0hr7r::::res://Assets/Sprites/background.png<>uid://gpi0yfxjh3t3::::res://Scenes/player.tscn<>uid://bvtnvi3vd8r6l::::res://Scenes/obstacle.tscn<>uid://cfdi3gh080w1f::::res://Scenes/spawner/spawner.tscn
+obstacle.tscn::PackedScene::3900436864397679173::1778437211::0::1::::<><><>0<>0<><>::uid://cqejf74ebsjqx::::res://Assets/Sprites/rockSnowDown.png<>uid://d3e7grl8cmqpv::::res://Scripts/obstacle.gd<>uid://dtfi2ha7ihubr::::res://Assets/Sprites/rockSnow.png
+player.tscn::PackedScene::452630378270620538::1778360436::0::1::::<><><>0<>0<><>::uid://gt3wr8rb44d::::res://Scripts/player.gd<>uid://q0cghfj8gn7n::::res://Assets/Sprites/Planes/planeRed1.png<>uid://wcfvmyu4tg8j::::res://Assets/Sprites/Planes/planeRed2.png<>uid://l1m1yptx56t::::res://Assets/Sprites/Planes/planeRed3.png
+::res://Scenes/spawner/::1778437063
+spawner.tscn::PackedScene::5130514784144737545::1778437063::0::1::::<><><>0<>0<><>::uid://c0nijjkvmc0e7::::res://Scripts/spawner.gd
+::res://Scripts/::1778437176
+main.gd::GDScript::1225960672681312843::1778360351::0::1::::<>Node2D<><>0<>0<><>::
+obstacle.gd::GDScript::9134761753884738611::1778437176::0::1::::<>Node2D<><>0<>0<><>::
+player.gd::GDScript::13591074913797321::1778360910::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
+spawner.gd::GDScript::6554901666355547644::1778437063::0::1::::Spawner<>Node2D<><>0<>0<><>::
