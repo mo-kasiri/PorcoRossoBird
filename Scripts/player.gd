@@ -54,11 +54,13 @@ func _add_pint():
 	
 func _stop_movement() ->void:
 	should_process_input = false;
+	animated_sprite_2d.play("idle")
 	
 func _stop_gravity() -> void:
 	gravity = 0
 	velocity = Vector2.ZERO
 
 func stop_movement() -> void:
+	print("stop player")
 	#_stop_gravity();
 	_stop_movement();

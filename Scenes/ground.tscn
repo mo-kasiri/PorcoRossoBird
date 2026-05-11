@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://4bp2xdl4108n"]
+
+[ext_resource type="Texture2D" uid="uid://cvjp578yskg1i" path="res://Assets/Sprites/groundSnow.png" id="1_688p1"]
+[ext_resource type="Script" uid="uid://b6wu00llomwrx" path="res://Scripts/ground.gd" id="1_oltiy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qvte6"]
+size = Vector2(808, 61.5)
+
+[node name="Ground" type="Node2D" unique_id=1881540504]
+script = ExtResource("1_oltiy")
+
+[node name="Ground1" type="Area2D" parent="." unique_id=1762700296]
+position = Vector2(404, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground1" unique_id=1005448912]
+unique_name_in_owner = true
+texture = ExtResource("1_688p1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground1" unique_id=475194666]
+position = Vector2(1, 4.75)
+shape = SubResource("RectangleShape2D_qvte6")
+
+[node name="Ground2" type="Area2D" parent="." unique_id=1975295834]
+position = Vector2(1212, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground2" unique_id=671526563]
+texture = ExtResource("1_688p1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2" unique_id=729843332]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_qvte6")
+debug_color = Color(0.99994653, 0, 0.11146807, 0.41960785)
+
+[connection signal="body_entered" from="Ground1" to="." method="_on_ground_body_entered"]
+[connection signal="body_entered" from="Ground2" to="." method="_on_ground_body_entered"]

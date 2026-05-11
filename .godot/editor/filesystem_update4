@@ -1,8 +1,5 @@
-res://Scenes/main.tscn
-res://Scripts/spawner.gd
-res://Scenes/obstacle.tscn
-res://Scripts/obstacle.gd
-res://Scenes/player.tscn
-res://Scripts/player.gd
-res://Scenes/spawner/spawner.tscn
+res://Scripts/ground.gd
+res://Scenes/ground.tscn
 res://Scripts/main.gd
+res://Scenes/main.tscn
+res://Scripts/player.gd
