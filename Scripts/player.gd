@@ -49,7 +49,7 @@ func _physics_process(delta: float) -> void:
 	rotation = _rotate_player(sign(velocity.y) * PI/6, delta)
 
 
-func _add_pint():
+func _add_point():
 	player_point += 1;
 	
 func _stop_movement() ->void:

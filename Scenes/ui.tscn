@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://bd6i5654rt081"]
+
+[ext_resource type="Script" uid="uid://y55me3vmggng" path="res://Scenes/ui.gd" id="1_qdvrb"]
+[ext_resource type="LabelSettings" uid="uid://c2ea2nx0hk1hp" path="res://label_72.tres" id="2_nf4gj"]
+[ext_resource type="Texture2D" uid="uid://dhcfq1juug1ru" path="res://Assets/Sprites/UI/textGetReady.png" id="3_2246s"]
+[ext_resource type="Texture2D" uid="uid://c42nhwabeqalv" path="res://Assets/Sprites/UI/tapTick.png" id="4_q7pk6"]
+[ext_resource type="Texture2D" uid="uid://i226rtrqfqpn" path="res://Assets/Sprites/UI/textGameOver.png" id="5_q7pk6"]
+
+[sub_resource type="Animation" id="Animation_2246s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StartMenu/TextureRect2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_q7pk6"]
+resource_name = "menu"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StartMenu/TextureRect2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.7, 0.7)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m78vo"]
+_data = {
+&"RESET": SubResource("Animation_2246s"),
+&"menu": SubResource("Animation_q7pk6")
+}
+
+[node name="UI" type="CanvasLayer" unique_id=2114426732]
+script = ExtResource("1_qdvrb")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=395840095]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 16
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=598422669]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "0"
+label_settings = ExtResource("2_nf4gj")
+
+[node name="StartMenu" type="Control" parent="." unique_id=395460419]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="StartMenu" unique_id=1955838759]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_right = 200.0
+offset_bottom = 73.0
+grow_horizontal = 2
+texture = ExtResource("3_2246s")
+
+[node name="TextureRect2" type="TextureRect" parent="StartMenu" unique_id=1195662874]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.5
+offset_top = -13.0
+offset_right = 29.5
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_q7pk6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1401263458]
+libraries/ = SubResource("AnimationLibrary_m78vo")
+autoplay = &"menu"
+
+[node name="GameOver" type="Control" parent="." unique_id=551035448]
+visible = false
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="GameOver" unique_id=2061728358]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_q7pk6")

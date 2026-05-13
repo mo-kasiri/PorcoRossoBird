@@ -2,6 +2,7 @@ extends Node2D
 class_name Spawner
 
 signal on_obstacle_crash;
+signal on_add_player_score;
 
 @onready var timer: Timer = $Timer
 
@@ -11,6 +12,7 @@ var _is_game_started = false;
 func create_obstacles():
 	var obs = OBSTACLE.instantiate()
 	obs.on_plane_crash.connect(_on_plane_crash)
+	obs.on_add_score.connect(_on_add_score)
 	
 	var viewport: Rect2 = get_viewport_rect()
 	obs.position.x = viewport.end.x + 150
@@ -41,3 +43,7 @@ func _stop_obstacles() -> void:
 func _on_plane_crash()-> void:
 	on_obstacle_crash.emit();
 	_stop_obstacles()
+	
+func _on_add_score() -> void:
+	on_add_player_score.emit();
+	

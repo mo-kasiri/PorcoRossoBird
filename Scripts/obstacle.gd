@@ -2,6 +2,7 @@ extends Node2D
 class_name Obstacle
 
 signal on_plane_crash;
+signal on_add_score;
 
 @export var move_speed: float = 150.0;
 
@@ -41,5 +42,6 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()
 
 func _on_exit_area_body_exited(body: Node2D) -> void:
-	Player.player_point += 1;
-	print(Player.player_point)
+	#Player.player_point += 1;
+	#print(Player.player_point)
+	on_add_score.emit();
