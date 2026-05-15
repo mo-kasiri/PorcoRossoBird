@@ -9,3 +9,5 @@ res://Scenes/obstacle.tscn
 res://Scripts/obstacle.gd
 res://Scenes/spawner/spawner.tscn
 res://Scripts/spawner.gd
+res://score_white.tres
+res://label_24_yellow.tres
