@@ -11,15 +11,23 @@ config_version=5
 [application]
 
 config/name="PorcoRossoBird"
+config/description="A flappy bird like game"
+config/version="0.1"
 run/main_scene="uid://dfx62yyn4tv4"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://b0vup4rya241f"
+
+[audio]
+
+buses/default_bus_layout="uid://cqjw5he84yr00"
 
 [display]
 
 window/size/viewport_width=480
 window/size/viewport_height=854
+window/size/mode=3
 window/stretch/mode="canvas_items"
+window/handheld/orientation=1
 
 [input]
 
@@ -39,3 +47,4 @@ jump={
 
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

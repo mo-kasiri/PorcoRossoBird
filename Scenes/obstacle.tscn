@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cqejf74ebsjqx" path="res://Assets/Sprites/rockSnowDown.png" id="1_2p81s"]
 [ext_resource type="Script" uid="uid://d3e7grl8cmqpv" path="res://Scripts/obstacle.gd" id="1_rvx1i"]
 [ext_resource type="Texture2D" uid="uid://dtfi2ha7ihubr" path="res://Assets/Sprites/rockSnow.png" id="2_rvx1i"]
+[ext_resource type="AudioStream" uid="uid://btxwdnahv1gc" path="res://Assets/Audio/sfx_hit.wav" id="4_a6yce"]
+[ext_resource type="AudioStream" uid="uid://c6ebci6361y4v" path="res://Assets/Audio/sfx_point.wav" id="5_p763d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rvx1i"]
 size = Vector2(20, 91.5)
@@ -10,6 +12,7 @@ size = Vector2(20, 91.5)
 [node name="Obstacle" type="Node2D" unique_id=2077279263]
 scale = Vector2(2, 2)
 script = ExtResource("1_rvx1i")
+move_speed = 1000.0
 
 [node name="Top" type="Area2D" parent="." unique_id=604916691]
 position = Vector2(0, -270)
@@ -39,6 +42,13 @@ position = Vector2(61, -100)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea" unique_id=1224657399]
 position = Vector2(-27, 0.5)
 shape = SubResource("RectangleShape2D_rvx1i")
+
+[node name="PlaneCrashSound" type="AudioStreamPlayer2D" parent="." unique_id=312999947]
+stream = ExtResource("4_a6yce")
+bus = &"SFX"
+
+[node name="CollectCoinSound" type="AudioStreamPlayer2D" parent="." unique_id=833426620]
+stream = ExtResource("5_p763d")
 
 [connection signal="body_entered" from="Top" to="." method="_on_top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_bottom_body_entered"]

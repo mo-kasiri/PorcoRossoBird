@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bd6i5654rt081" path="res://Scenes/ui.tscn" id="4_21xkr"]
 [ext_resource type="PackedScene" uid="uid://4bp2xdl4108n" path="res://Scenes/ground.tscn" id="5_21xkr"]
 [ext_resource type="PackedScene" uid="uid://cfdi3gh080w1f" path="res://Scenes/spawner/spawner.tscn" id="5_kry3j"]
+[ext_resource type="AudioStream" uid="uid://bx3r8wxsr0kvd" path="res://Assets/Audio/19. Run, Jump, Throw! Stage 1.mp3" id="7_6bp64"]
 
 [node name="main" type="Node2D" unique_id=1463615460]
 script = ExtResource("1_8gbba")
@@ -29,6 +30,9 @@ position = Vector2(0, 821)
 position = Vector2(-5, 96)
 
 [node name="UI" parent="." unique_id=2114426732 instance=ExtResource("4_21xkr")]
+
+[node name="MainThemeMusic" type="AudioStreamPlayer2D" parent="." unique_id=1536330986]
+stream = ExtResource("7_6bp64")
 
 [connection signal="on_game_started" from="Player" to="." method="_on_player_on_game_started"]
 [connection signal="on_game_started" from="Player" to="Spawner" method="_on_player_on_game_started"]

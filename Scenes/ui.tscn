@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b2akkjgeahful" path="res://Assets/Sprites/UI/medalBronze.png" id="8_g0wmg"]
 [ext_resource type="LabelSettings" uid="uid://dhla5lxagg1rw" path="res://score_white.tres" id="9_4vbiv"]
 [ext_resource type="Texture2D" uid="uid://dyhg0r54sbqk" path="res://Assets/Sprites/UI/buttonLarge_pressed.png" id="11_4vbiv"]
+[ext_resource type="AudioStream" uid="uid://n4uhi804cph8" path="res://Assets/Audio/sfx_bup_soosh.wav" id="12_4vbiv"]
 
 [sub_resource type="Animation" id="Animation_2246s"]
 length = 0.001
@@ -117,6 +118,7 @@ autoplay = &"menu"
 
 [node name="GameOver" type="VBoxContainer" parent="." unique_id=1368463638]
 unique_name_in_owner = true
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -169,6 +171,7 @@ text = "Medal"
 label_settings = ExtResource("7_nt8jn")
 
 [node name="MedalImage" type="TextureRect" parent="GameOver/BG/MarginContainer/HBoxContainer/VBoxContainer" unique_id=468181874]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 texture = ExtResource("8_g0wmg")
@@ -223,5 +226,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_bottom = 5
+
+[node name="ClickOKSound" type="AudioStreamPlayer2D" parent="GameOver" unique_id=1433670053]
+stream = ExtResource("12_4vbiv")
+volume_db = 1.612
 
 [connection signal="pressed" from="GameOver/OkButton" to="." method="_on_ok_button_pressed"]

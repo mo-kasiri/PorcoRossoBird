@@ -1,13 +1,2 @@
-res://Scripts/ground.gd
-res://Scenes/ground.tscn
-res://Scripts/main.gd
 res://Scenes/main.tscn
-res://Scripts/player.gd
-res://Scenes/ui.tscn
-res://Scenes/ui.gd
 res://Scenes/obstacle.tscn
-res://Scripts/obstacle.gd
-res://Scenes/spawner/spawner.tscn
-res://Scripts/spawner.gd
-res://score_white.tres
-res://label_24_yellow.tres

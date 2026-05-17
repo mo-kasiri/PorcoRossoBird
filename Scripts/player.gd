@@ -6,6 +6,7 @@ const PI: float = 3.141592653589793;
 signal on_game_started;
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var jump_audio: AudioStreamPlayer2D = $JumpAudio
 
 @export var gravity : float = 1000;
 @export var jump_force: float = -400
@@ -26,6 +27,7 @@ func _rotate_player(deg: float, delta: float) -> float:
 		
 func _input_process():
 	if (Input.is_action_just_pressed("jump") and should_process_input):
+		jump_audio.play();
 		velocity.y = jump_force;
 		if not is_started:
 			is_started = true;

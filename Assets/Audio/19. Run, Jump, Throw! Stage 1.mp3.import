@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bx3r8wxsr0kvd"
+path="res://.godot/imported/19. Run, Jump, Throw! Stage 1.mp3-710648e387d15c35cca1fb51f217f218.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/19. Run, Jump, Throw! Stage 1.mp3"
+dest_files=["res://.godot/imported/19. Run, Jump, Throw! Stage 1.mp3-710648e387d15c35cca1fb51f217f218.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

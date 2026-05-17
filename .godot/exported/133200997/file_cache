@@ -1,0 +1,10 @@
+res://Scenes/spawner/spawner.tscn::7627ff471b1ac50b495afc819f82c0bf::1778704306::res://.godot/exported/133200997/export-b5822879de409e3d8751a05625abc745-spawner.scn
+res://Scenes/ground.tscn::796fe2acfa9e7be3f2bfac6d501aa7dc::1778870290::res://.godot/exported/133200997/export-01d143c1f39f29c4499f62e27aca6de9-ground.scn
+res://Scenes/main.tscn::6542d8b88caa1c045b39cb241e308fc9::1778872223::res://.godot/exported/133200997/export-2ddd04d543d5858e7f20c9299a8b5096-main.scn
+res://Scenes/obstacle.tscn::6f15229822d329b16397a42fb4231c78::1778870411::res://.godot/exported/133200997/export-a965547d098bee7640744cf8245d1286-obstacle.scn
+res://Scenes/player.tscn::df6553c432247f7bf6ab7ce406c2ea0c::1778869879::res://.godot/exported/133200997/export-1753c997600d68ab5d20ae99fddb15c6-player.scn
+res://Scenes/ui.tscn::5ed5cc17e1687fba5af83e2c58c4a942::1778870756::res://.godot/exported/133200997/export-bc7c2c8286022576ab0a03a61017540b-ui.scn
+res://default_bus_layout.tres::79fe8114abd742151336d3664e80857f::1778869789::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+res://label_24_yellow.tres::54da2e7370c86e3399887da97a3a5621::1778852311::res://.godot/exported/133200997/export-c341663f134805802650fb459cedbb75-label_24_yellow.res
+res://label_72.tres::e4a0a4aef4e894d215928760a931d50a::1778703840::res://.godot/exported/133200997/export-275a49272efd9339217896b41a2259a5-label_72.res
+res://score_white.tres::ad88c48c9d5d8dc673d284534d2e231b::1778852311::res://.godot/exported/133200997/export-7f3f6485aabee187d64fff50d940c1f2-score_white.res
